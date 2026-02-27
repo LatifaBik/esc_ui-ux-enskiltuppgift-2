@@ -1,9 +1,9 @@
-describe("Hacker Escape Rooms - smoke test", () => {
+describe("Cypress E2E test - Hacker Escape Rooms", () => {
   it("Sidan är uppe på localhost och visar korrekt H1", () => {
-    cy.visit("/");                 // kontrollerar att sidan laddar
+    cy.visit("/");                 
     cy.location("hostname").should("eq", "localhost");
 
-    // Kontrollera statisk text i H1 (byt texten till din riktiga rubrik!)
+    // Kontrollerar statisk text i H1 
     cy.get("h1").should("be.visible");
     cy.get("h1").should("contain.text", "Popular challenges right now");
   });
